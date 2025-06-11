@@ -53,7 +53,14 @@
 
       <section id="lista" class="seccion">
         <h2>Lista de Evaluaciones</h2>
-        <ul id="evaluaciones"></ul>
+        <div class="filtros-fecha">
+  <label>Desde: <input type="date" id="filtro-desde"></label>
+  <label>Hasta: <input type="date" id="filtro-hasta"></label>
+  <button id="filtrar-fechas">Filtrar</button>
+</div>
+
+<div id="evaluaciones" class="contenedor-evaluaciones"></div>
+        <button id="eliminar-todo" class="btn-delete">Eliminar todas las evaluaciones</button>
       </section> 
       
       <section id="graficas" class="seccion">
