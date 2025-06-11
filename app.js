@@ -70,22 +70,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-  // Navegación entre secciones
 document.querySelectorAll('.nav-menu a').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const seccionId = e.target.getAttribute('data-section');
 
-    // Oculta todas las secciones
     document.querySelectorAll('.seccion').forEach(seccion => {
       seccion.style.display = 'none';
     });
-    // Muestra la seleccionada
     document.getElementById(seccionId).style.display = 'block';
   });
 });
 
-// Mostrar solo la primera sección al cargar
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.seccion').forEach((seccion, i) => {
     seccion.style.display = i === 0 ? 'block' : 'none';
@@ -100,4 +96,59 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleBtn.addEventListener("click", () => {
     navMenu.classList.toggle("show");
   });
+});
+
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  document.querySelectorAll('.error').forEach(el => el.textContent = '');
+  document.querySelectorAll('input, select').forEach(el => el.classList.remove('error-input'));
+
+  const materia = document.getElementById("materia");
+  const evaluacion = document.getElementById("evaluacion");
+  const calificacion = document.getElementById("calificacion");
+  const fecha = document.getElementById("fecha");
+
+  let valid = true;
+
+  if (!materia.value) {
+    document.getElementById("error-materia").textContent = "Debe tener un valor";
+    materia.classList.add("error-input");
+    valid = false;
+  }
+
+  if (!evaluacion.value.trim()) {
+    document.getElementById("error-evaluacion").textContent = "Debe tener un valor";
+    evaluacion.classList.add("error-input");
+    valid = false;
+  }
+
+  const nota = parseFloat(calificacion.value);
+  if (isNaN(nota) || nota < 0 || nota > 100) {
+    document.getElementById("error-calificacion").textContent = "Debe ser un número entre 0 y 100";
+    calificacion.classList.add("error-input");
+    valid = false;
+  }
+
+  if (!fecha.value) {
+    document.getElementById("error-fecha").textContent = "Debe tener un valor";
+    fecha.classList.add("error-input");
+    valid = false;
+  }
+
+  if (!valid) return;
+
+  const nuevoDato = {
+    materia: materia.value,
+    evaluacion: evaluacion.value.trim(),
+    calificacion: nota,
+    fecha: fecha.value
+  };
+
+  datos.push(nuevoDato);
+
+  actualizarLista();
+  actualizarGrafico();
+  form.reset();
 });

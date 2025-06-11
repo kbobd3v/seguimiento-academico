@@ -178,3 +178,27 @@ footer {
     font-size: 1.2em;
   }
 }
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+input.error-input, select.error-input {
+  border-color: red;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: -10px;
+  display: block;
+}
+
+.add {
+  margin-top: 10px;
+}

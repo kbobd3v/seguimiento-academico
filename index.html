@@ -25,15 +25,29 @@
         <h2>Registrar evaluación</h2>
         <form id="form-evaluacion">
             <label>Materia:
-                <input type="text" id="materia" required> <!--El required indica que este campo materia es obligatorio y no puede quedar vacio-->
+                        <select id="materia" required>
+            <option value="">Seleccione una materia</option>
+            <option value="Matemáticas">Matemáticas</option>
+            <option value="Física">Física</option>
+            <option value="Química">Química</option>
+            <option value="Programación">Programación</option>
+        </select>
+        <span class="error" id="error-materia"></span> 
             </label>
             <label>Evaluación:
                 <input type="text" id="evaluacion" required> 
+                <span class="error" id="error-evaluacion"></span>
             </label>
             <label>Calificación (0 - 100):
-                <input type="number" id="calificacion" min="0" max="100" required> 
+                <input type="number" id="calificacion" min="0" max="100" required>
+                <span class="error" id="error-calificacion"></span>
             </label>
-            <button type="submit">Agregar</button>
+            <label>Fecha:
+              <input type="date" id="fecha" required>
+              <span class="error" id="error-fecha"></span>
+    </label>
+
+            <button type="submit" class="add">Agregar</button>
         </form>
       </section>
 
