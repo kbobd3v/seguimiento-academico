@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEGUIMIENTO ACADÉMICO</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Seguimiento Académico</h1>
+        <nav class="navbar">
+          <ul class="nav-menu">
+            <li><a href="#" data-section="registro">Registrar</a></li>
+            <li><a href="#" data-section="lista">Lista</a></li>
+            <li><a href="#" data-section="graficas">Gráficas</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+      <section id="registro" class="seccion">
+        <h2>Registrar evaluación</h2>
+        <form id="form-evaluacion">
+            <label>Materia:
+                <input type="text" id="materia" required> <!--El required indica que este campo materia es obligatorio y no puede quedar vacio-->
+            </label>
+            <label>Evaluación:
+                <input type="text" id="evaluacion" required> 
+            </label>
+            <label>Calificación (0 - 100):
+                <input type="number" id="calificacion" min="0" max="100" required> 
+            </label>
+            <button type="submit">Agregar</button>
+        </form>
+      </section>
+
+      <section id="lista" class="seccion">
+        <h2>Lista de Evaluaciones</h2>
+        <ul id="evaluaciones"></ul>
+      </section> 
+      
+      <section id="graficas" class="seccion">
+        <h2>Gráfica de Notas</h2>
+        <canvas id="graficoBarras"></canvas>
+      </section>
+    </main>
+
+    <footer>
+        <p>&copy Portal académico PSPB05-4 2025</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
