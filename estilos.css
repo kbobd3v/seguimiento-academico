@@ -114,3 +114,67 @@ footer {
   text-decoration: underline;
   transform: scale(1.05);
 }
+
+/* Estilo base del botón hamburguesa */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+/* Base del menú */
+.navbar {
+  position: relative;
+}
+
+/* Sidebar oculto en móviles */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 30px;
+}
+
+/* Responsive: sidebar a la izquierda */
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #0c0566;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    padding: 60px 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-menu.show {
+    left: 0;
+  }
+
+  .nav-menu li {
+    margin: 15px 0;
+  }
+
+  .nav-menu li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.2em;
+  }
+}

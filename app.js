@@ -91,3 +91,13 @@ document.addEventListener("DOMContentLoaded", () => {
     seccion.style.display = i === 0 ? 'block' : 'none';
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector(".nav-menu");
+
+  toggleBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+});
