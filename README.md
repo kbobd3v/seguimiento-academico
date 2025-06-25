@@ -10,3 +10,10 @@ https://kbobd3v.github.io/seguimiento-academico/
 git clone git@github.com:kbobd3v/seguimiento-academico.git
 cd seguimiento-academico
 open index.html
+
+## Acceso
+
+Para ingresar al sistema:
+
+- **Usuario:** admin
+- **Contraseña:** admin

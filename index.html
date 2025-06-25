@@ -21,6 +21,21 @@
     </nav>
   </header>
     <main>
+      <section id="login" class="seccion">
+  <h2>Iniciar sesión</h2>
+  <form id="form-login">
+    <label>Usuario:
+      <input type="text" id="usuario" required>
+      <span class="error" id="error-usuario"></span>
+    </label>
+    <label>Contraseña:
+      <input type="password" id="password" required>
+      <span class="error" id="error-password"></span>
+    </label>
+    <button type="submit">Ingresar</button>
+    <p class="error" id="mensaje-error-login"></p>
+  </form>
+</section>
       <section id="registro" class="seccion">
         <h2>Registrar evaluación</h2>
         <form id="form-evaluacion">

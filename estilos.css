@@ -1,3 +1,8 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -37,7 +42,9 @@ form label {
 }
 
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+input[type="password"],
+input[type="date"] {
   width: 98%;
   padding: 10px;
   margin-top: 5px;
@@ -262,4 +269,13 @@ input.error-input, select.error-input {
 
 .card-evaluacion .dato {
   margin: 5px 0;
+}
+
+#mensaje-error-login {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form button {
+  margin-top: 10px;
 }
