@@ -1,0 +1,23 @@
+{
+  "name": "entrega_semana_5",
+  "version": "1.0.0",
+  "description": "Proyecto para manejo de notas (HTML, CSS, JS). Se muestra en GitHub Pages.",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kbobd3v/seguimiento-academico.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kbobd3v/seguimiento-academico/issues"
+  },
+  "homepage": "https://github.com/kbobd3v/seguimiento-academico#readme",
+  "devDependencies": {
+    "jest": "^30.0.3"
+  }
+}
